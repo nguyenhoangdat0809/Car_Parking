@@ -122,6 +122,6 @@ switch (State_Sensor){
 int getMemoryFree(){
 extern int _heap_start;
 extern int *_brkval;
-
+//get free memory from function
 return (int) SP - (_brkval == 0 ? (int) &_heap_start : (int) _brkval);
 }
